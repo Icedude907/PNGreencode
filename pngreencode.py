@@ -18,8 +18,7 @@ def main():
     parser.add_argument("-r", "--recurse", action='store_const', const=True, default=False, help="Process files in subdirectories")
     outgroup = parser.add_mutually_exclusive_group()
     outgroup.add_argument("-w!", "--writeover", action='store_const', const=True, default=False, help="Overwrite image files when a more optimal version is generated")
-    # TODO:
-    outgroup.add_argument("-o", "--output", metavar="DIR", action='store', help="Specify an output directory to place optimal files into. If relative, based on the current directory.")
+    outgroup.add_argument("-o", "--output", metavar="DIR", action='store', help="Specify an output directory to place optimal files into. If relative, based on the current directory")
     parser.add_argument("--no-skip", action='store_const', const=True, default=False, help="If specified, the new file will be written even if it saves space")
 
     args = parser.parse_args()
